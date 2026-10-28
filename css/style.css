@@ -1,0 +1,506 @@
+
+/* =========================
+   GENERAL STYLES
+========================= */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    line-height: 1.6;
+    color: #173b3d;
+    background-color: #f4f8f4;
+}
+
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+h1,
+h2,
+h3 {
+    line-height: 1.3;
+}
+
+p {
+    margin-bottom: 1em;
+}
+
+img {
+    max-width: 100%;
+}
+
+/* =========================
+   NAVIGATION
+========================= */
+.navbar {
+    background-color: #123f43;
+    padding: 1em 0;
+}
+
+.navbar .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 1.5em;
+}
+
+.logo a {
+    color: #fff5e5;
+    font-size: 1.5em;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.nav-links {
+    display: flex;
+    align-items: center;
+    list-style: none;
+}
+
+.nav-links li {
+    margin-left: 1.5em;
+}
+
+.nav-links a {
+    color: #e1eee8;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.nav-links a:hover,
+.nav-links a.active {
+    color: #f0bd78;
+}
+
+/* =========================
+   BUTTON
+========================= */
+.btn {
+    display: inline-block;
+    background-color: #d89b55;
+    color: #173b3d;
+    padding: 0.75em 1.5em;
+    margin-top: 1em;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 5px;
+    transition: background-color 0.3s ease,
+                transform 0.3s ease;
+}
+
+.btn:hover {
+    background-color: #efbd7e;
+    transform: translateY(-2px);
+}
+
+/* =========================
+   HOME / HERO
+========================= */
+.hero {
+    position: relative;
+    overflow: hidden;
+    padding: 5em 0;
+    text-align: center;
+    color: #ffffff;
+    background-color: #176b70;
+}
+
+.hero::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background-image: url("../img/images.jpeg");
+    background-size: cover;
+    background-position: center;
+    filter: brightness(0.45);
+    transform: scale(1.02);
+}
+
+.hero .container {
+    position: relative;
+    z-index: 1;
+}
+
+.hero h1 {
+    color: #fff5e5;
+    font-size: 2.8em;
+    margin-bottom: 0.5em;
+}
+
+.hero p {
+    max-width: 850px;
+    margin: 0 auto;
+    font-size: 1.15em;
+}
+
+/* =========================
+   SHARED SECTION STYLES
+========================= */
+.about,
+.menu,
+.contact,
+.Testimonials {
+    padding: 3em;
+}
+
+.about {
+    background-color: #e2eee8;
+}
+
+.menu {
+    background-color: #f4f8f4;
+}
+
+.contact {
+    background-color: #d9e9e2;
+}
+
+.Testimonials {
+    background-color: #e5f0e9;
+}
+
+.about h1,
+.menu h1,
+.contact h1,
+.Testimonials h1 {
+    text-align: center;
+    color: #123f43;
+    margin-bottom: 1em;
+}
+
+.section-intro {
+    max-width: 800px;
+    margin: 0 auto 2em;
+    text-align: center;
+}
+
+/* =========================
+   ABOUT PAGE
+========================= */
+.about p {
+    margin-bottom: 1em;
+}
+
+.about .btn {
+    margin-top: 0.5em;
+}
+
+/* =========================
+   ABOUT PHOTO
+   FULL RECTANGLE
+========================= */
+.banner {
+    width: 100%;
+    padding: 0;
+    margin: 0;
+    background-color: #ffffff;
+    overflow: hidden;
+}
+
+.banner .container {
+    width: 100%;
+    max-width: none;
+    margin: 0;
+    padding: 0;
+}
+
+.about-photo {
+    display: block;
+    width: 100%;
+    max-width: none;
+    height: 450px;
+    max-height: none;
+    object-fit: cover;
+    object-position: center;
+    border-radius: 0;
+    margin: 0;
+    padding: 0;
+}
+
+/* =========================
+   MENU PAGE
+========================= */
+.menu-section {
+    margin-bottom: 2em;
+}
+
+.menu-section h2 {
+    color: #176b70;
+    border-bottom: 2px solid #d89b55;
+    padding-bottom: 0.5em;
+    margin-bottom: 1em;
+}
+
+.menu-section ul {
+    list-style: none;
+}
+
+.menu-section li {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    gap: 1em;
+    padding: 1em;
+    margin-bottom: 1em;
+    background-color: #ffffff;
+    border-radius: 5px;
+    box-shadow: 0 2px 8px rgba(18, 63, 67, 0.10);
+    transition: transform 0.3s ease,
+                box-shadow 0.3s ease;
+}
+
+.menu-section li:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 5px 14px rgba(18, 63, 67, 0.15);
+}
+
+.menu-section .dish-img {
+    width: 100px;
+    height: 100px;
+    flex-shrink: 0;
+    object-fit: cover;
+    border-radius: 5px;
+    background-color: #d9e9e2;
+}
+
+.menu-section .details {
+    flex: 1;
+    min-width: 0;
+}
+
+.menu-section .title-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 1em;
+}
+
+.menu-section .dish {
+    font-weight: bold;
+    color: #123f43;
+    font-size: 1.1em;
+}
+
+.menu-section .price {
+    color: #176b70;
+    font-weight: bold;
+    white-space: nowrap;
+}
+
+.menu-section .details p {
+    margin-top: 0.5em;
+    margin-bottom: 0;
+}
+
+.menu-note,
+.testimonial-note,
+.form-note {
+    margin-top: 1em;
+    font-size: 0.9em;
+    color: #476565;
+}
+
+/* =========================
+   TESTIMONIALS
+========================= */
+.testimonial-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 1.5em;
+}
+
+.testimonial-card {
+    background-color: #ffffff;
+    padding: 1.5em;
+    border-left: 5px solid #d89b55;
+    border-radius: 5px;
+    box-shadow: 0 2px 8px rgba(18, 63, 67, 0.10);
+    transition: transform 0.3s ease,
+                box-shadow 0.3s ease;
+}
+
+.testimonial-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 5px 14px rgba(18, 63, 67, 0.14);
+}
+
+.testimonial-card p {
+    color: #294d4e;
+    font-style: italic;
+}
+
+.testimonial-card span {
+    display: block;
+    text-align: right;
+    color: #176b70;
+    font-weight: bold;
+}
+
+.testimonial-note {
+    text-align: center;
+}
+
+/* =========================
+   CONTACT PAGE
+========================= */
+.contact-details {
+    margin-bottom: 2em;
+    text-align: center;
+}
+
+.contact-details p {
+    margin-bottom: 0.5em;
+}
+
+.contact-form {
+    width: 100%;
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 1.5em;
+    background-color: #ffffff;
+    border-radius: 5px;
+    box-shadow: 0 2px 8px rgba(18, 63, 67, 0.10);
+}
+
+.contact-form label {
+    display: block;
+    margin-bottom: 0.5em;
+    color: #123f43;
+    font-weight: bold;
+}
+
+.contact-form input,
+.contact-form textarea {
+    display: block;
+    width: 100%;
+    padding: 0.8em;
+    margin-bottom: 1.2em;
+    border: 1px solid #9bbab0;
+    border-radius: 5px;
+    background-color: #ffffff;
+    color: #173b3d;
+    font: inherit;
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus {
+    outline: 2px solid #d89b55;
+    border-color: #176b70;
+}
+
+.contact-form textarea {
+    resize: vertical;
+}
+
+.contact-form button {
+    padding: 0.8em 1.5em;
+    border: none;
+    border-radius: 5px;
+    background-color: #176b70;
+    color: #ffffff;
+    font: inherit;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.contact-form button:hover {
+    background-color: #123f43;
+}
+
+/* =========================
+   FOOTER
+========================= */
+footer {
+    padding: 1.2em 0;
+    background-color: #123f43;
+    color: #ffffff;
+    text-align: center;
+}
+
+footer p {
+    margin: 0;
+    font-size: 0.9em;
+}
+
+/* =========================
+   RESPONSIVE DESIGN
+========================= */
+@media (max-width: 768px) {
+    .navbar .container {
+        flex-direction: column;
+        gap: 0.8em;
+    }
+
+    .nav-links {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .nav-links li {
+        margin: 0.4em 0.7em;
+    }
+
+    .hero {
+        padding: 4em 0;
+    }
+
+    .hero h1 {
+        font-size: 2em;
+    }
+
+    .hero p {
+        font-size: 1em;
+    }
+
+    .about,
+    .menu,
+    .contact,
+    .Testimonials {
+        padding: 2em 1em;
+    }
+
+    .about-photo {
+        height: 300px;
+    }
+
+    .testimonial-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .menu-section li {
+        flex-direction: column;
+    }
+
+    .menu-section .dish-img {
+        width: 100%;
+        height: 220px;
+    }
+
+    .menu-section .title-row {
+        flex-wrap: wrap;
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    html {
+        scroll-behavior: auto;
+    }
+
+    *,
+    *::before,
+    *::after {
+        transition-duration: 0.01ms !important;
+        animation-duration: 0.01ms !important;
+    }
+}
